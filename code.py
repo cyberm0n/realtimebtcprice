@@ -8,4 +8,6 @@ while True:
     url = key+currencies
     data = requests.get(url)
     data = data.json()
+    with open('price.txt', 'a') as f:
+        f.write(data+"\n")
     print(">>>",data)
